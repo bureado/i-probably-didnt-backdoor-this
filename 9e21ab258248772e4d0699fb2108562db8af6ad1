@@ -1,3 +1,8 @@
+podman run --rm -v "/tmp/bbb/new/i-probably-didnt-backdoor-this:/app" -w /app  \
+	rust@sha256:8463cc29a3187a10fc8bf5200619aadf78091b997b0c3941345332a931c40a64 \
+	cargo build --release --locked --target=x86_64-unknown-linux-musl
+b2sum target/x86_64-unknown-linux-musl/release/asdf
+abdac109cfe060fdf59e7196b11b39be623da148cb03fe47973edab5f28a708ab2bfe02a1785c0a907d0cb3d1cb4d7baf66d155b317af9b0452fb9cb1de895a9  target/x86_64-unknown-linux-musl/release/asdf
 buildah bud --timestamp 0 --tag asdf
 STEP 1: FROM docker.io/alpine@sha256:eb3e4e175ba6d212ba1d6e04fc0782916c08e1c9d7b45892e9796141b1d379ae
 STEP 2: COPY target/x86_64-unknown-linux-musl/release/asdf /asdf
