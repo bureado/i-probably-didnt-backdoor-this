@@ -1,0 +1,9 @@
+buildah bud --timestamp 0 --tag asdf
+STEP 1: FROM docker.io/alpine@sha256:eb3e4e175ba6d212ba1d6e04fc0782916c08e1c9d7b45892e9796141b1d379ae
+STEP 2: COPY target/x86_64-unknown-linux-musl/release/asdf /asdf
+STEP 3: ENTRYPOINT ["/asdf"]
+STEP 4: COMMIT asdf
+--> 459617f2305
+459617f230504d773fce949d39c0eb4876b4b5af0cfb77529be0f6ec343650eb
+buildah inspect --format '{{.FromImageID}}' asdf
+459617f230504d773fce949d39c0eb4876b4b5af0cfb77529be0f6ec343650eb
