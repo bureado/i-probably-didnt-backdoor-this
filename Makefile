@@ -4,7 +4,7 @@ build:
 		cargo build --release --locked --target=x86_64-unknown-linux-musl
 
 docker:
-	sudo buildah bud --timestamp 0 --tag asdf
+	buildah bud --timestamp 0 --tag asdf
 
 src.tgz:
 	git archive -o src.tgz HEAD
