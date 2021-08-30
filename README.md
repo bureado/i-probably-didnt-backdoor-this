@@ -55,15 +55,20 @@ $ git rev-parse HEAD
 aabbccddeeff00112233445566778899aabbccdd
 ```
 
-The hash in the last line is going to be different for you. This 40 character
-id is what you need for your paper trail, you need to write this down
+This 40 character id is what you need for your paper trail, you need to write this down
 (preferably along with the current date) and keep it in a safe location. It
 needs to be protected from undetected tampering but isn't secret, so you may
 create copies or even post it publicly.
 
 This id uniquely identifies all files in this repository with their content. If
 a file is modified/removed/added/renamed in this repository, this hash changes
-too.
+too. This is why you see a placeholder hash above.
+
+   **Note**: [git-notes](git@github.com:bureado/i-probably-didnt-backdoor-this.git) allows you to
+   add metadata that becomes known after a commit. In this repo, we add notes to each commit with
+   the output of the `make` and `make docker` commands. This ensures that you get a hash reference
+   that might help in your reproducibility journey. To fetch notes, `clone` this repo and then:
+   `git fetch origin "refs/notes/*:refs/notes/*" && git notes show`
 
 If you want to read more about the cryptographic properties behind this, look
 into [Merkel trees](https://en.wikipedia.org/wiki/Merkle_tree).
@@ -129,6 +134,8 @@ If you get the same checksum you've successfully reproduced the binary. If
 there's no difference between the pre-compiled binary and the one you built
 yourself this means the pre-compiled binary is just as trustworthy as the one
 you built yourself.
+
+**Note**: see _Preparing retroactive reviews_ above for a refresher on the `git notes` available in this repository.
 
 ### Reproducing the Docker image
 
