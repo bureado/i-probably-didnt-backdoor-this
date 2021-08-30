@@ -148,7 +148,7 @@ sha256 hash, then `COPY`s the binary we've built in the previous section.
 $ b2sum target/x86_64-unknown-linux-musl/release/asdf
 35578eb5fbd13fe27bbc9f799488de2a196acfdb00886d7a5b88e13e0a73e8197fded1afdc9eb6b886864cd39bdeaa17910351da971710056630b1cb3a31a8cd  target/x86_64-unknown-linux-musl/release/asdf
 $ make docker
-sudo buildah bud --timestamp 0 --tag asdf
+buildah bud --timestamp 0 --tag asdf
 STEP 1/3: FROM docker.io/alpine@sha256:eb3e4e175ba6d212ba1d6e04fc0782916c08e1c9d7b45892e9796141b1d379ae
 STEP 2/3: COPY target/x86_64-unknown-linux-musl/release/asdf /asdf
 STEP 3/3: ENTRYPOINT ["/asdf"]
