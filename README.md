@@ -64,7 +64,7 @@ This id uniquely identifies all files in this repository with their content. If
 a file is modified/removed/added/renamed in this repository, this hash changes
 too. This is why you see a placeholder hash above.
 
-   **Note**: [git-notes](git@github.com:bureado/i-probably-didnt-backdoor-this.git) allows you to
+   **Note**: [git-notes](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-notes.html) allows you to
    add metadata that becomes known after a commit. In this repo, we add notes to each commit with
    the output of the `make` and `make docker` commands. This ensures that you get a hash reference
    that might help in your reproducibility journey. To fetch notes, `clone` this repo and then:
