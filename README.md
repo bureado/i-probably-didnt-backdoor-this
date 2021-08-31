@@ -71,7 +71,13 @@ too. This is why you see a placeholder hash above.
    `git fetch origin "refs/notes/*:refs/notes/*" && git notes show`
 
 If you want to read more about the cryptographic properties behind this, look
-into [Merkel trees](https://en.wikipedia.org/wiki/Merkle_tree).
+into [Merkel trees](https://en.wikipedia.org/wiki/Merkle_tree), and the following resources:
+
+* [How are git hashes calculated](https://gist.github.com/masak/2415865)
+* [Anatomy of a git commit](https://blog.thoughtram.io/git/2014/11/18/the-anatomy-of-a-git-commit.html)
+* [Blobs are stored in trees](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/3-blobs-are-stored-in-trees.html)
+* Git Internals: [Git references](https://git-scm.com/book/en/v2/Git-Internals-Git-References)
+* Git Internals: [Git objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
 
 ### Pinned external resources
 
